@@ -1,3 +1,12 @@
+In following code we are making a wave pattern with the values of a sorted array.
+ie: suppose an array a=[1,2,3,4,5]
+resultant array must be a=[2,1,4,3,5]
+Hence creating a ripple with \. /' \. /'  in values of array. 
+Its a simple concept all we need to do is run array till the n-1 length to avoid out of range error
+then we compare postion of indices to check if they are even 
+in case they are we interchange there value with next element if next element is greater than our value
+hence creating a wave like structure.
+
 from typing import List
 
 
