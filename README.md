@@ -1,2 +1,2 @@
 # Data-Structure-And-Algorithms
-Data Structures ans Algorithm prpblems and solution walkthroughs
+Data Structures and Algorithm prpblems and solution walkthroughs
