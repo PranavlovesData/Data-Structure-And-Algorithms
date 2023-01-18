@@ -3,6 +3,13 @@
 class Solution:
    
     # Function to find the sum of contiguous subarray with maximum sum.
+    # this method is also called BruteForce Method 
+    # we iterate thorugh all possible sub array and find the sum of the one with maximum value.
+    # since value can be negeative as well we start max function as -1000000000000 and sum as 0 in the loop as it reset every iteration.
+    # when value of sum is greater than max we update max to the value
+    # finally return the value of max_sum/max.
+    
+    
     def maxSubArraySum(self, arr, N):
         max_sum = -1000000000
         for i in range(N):
