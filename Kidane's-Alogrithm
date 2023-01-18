@@ -1,0 +1,45 @@
+Kidane's Alogrithm
+Its an anlgorithm used to find contiguous sum of sub array but in simpler way than "Brute force method" which involves iteration through all subarrays and finding 
+which one has largest sum of sub array 
+
+Brute Force Method:
+#######################################################
+
+def  BruteForceEx(self,arr,N):
+    max=arr[0]
+    
+    for i in range(N):
+       sum=0
+      for j in range(N):
+          sum+=arr[j]
+          if sum > max:
+            max=sum
+     return max
+     
+   
+
+Kidane's Algorithm:
+#########################################################
+ 
+def KidaneAlgoEx(self,arr,N):
+  max=arr[0]  or -10000000
+  curr=0
+  for i in range(N):
+    curr +=arr[i]
+    if curr>max:
+      max=curr
+    if curr<0:
+      curr=0
+   return max
+   
+   Now what we are doing here is simply adding elements of subarray in curr untill curr becomes larger than max 
+   Then we update value of max to curr value
+   Whats diff here is that we are not running summation for all subarray rather when value of curr reaches less than zero we set it to zero 
+   Hence every time curr value is negative it doesnt affect max and we remove it and when value of curr in less than max we dont add it to max
+   
+   
+   
+    
+    
+    
+
