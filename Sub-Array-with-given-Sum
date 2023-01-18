@@ -1,0 +1,60 @@
+In this code we have to find a postions of sub array whose summation is equal to given value (S).Otherwise return -1
+We start by initaling variable start and curr to store the postions of indexes in arr 
+Also instantiate sum with first variable storing postion of arr[0]
+Now we run a loop till n. i.e length of arr
+
+
+class Solution:
+    def subArraySum(self,arr,n,s):
+        if s==0:
+            return [-1]
+        start,curr,sum=0,0,arr[0]
+        
+        while curr <n:
+            if sum < s:                    # condition 1: while sum is less than value of S we update value of curr's postion while also updating value of sum
+                curr+=1
+                if curr >=n:               # condition 2 : we need to make sure value of curr is less of equal to n so that out of range error can be avoided
+                    break
+                sum+=arr[curr]
+            elif sum > s:                  # condition 3: when value of sum becomes greater than S we need to remove value in intial index while also updating start
+                sum -= arr[start]
+                start+=1
+            if sum ==s:                    # condition  4: finally when value of sum reaches S we need to return position: start and curr/final with 1 increment
+                                                           we are doing 1 based indexing instead of 0 based in this question
+                return [start+1,curr+1]
+        return [-1]
+
+
+
+
+# driver code
+#{
+import math
+
+def main():
+    T = int(input())
+    while (T > 0):
+
+        NS = input().strip().split()
+        N = int(NS[0])
+        S = int(NS[1])
+
+        A = list(map(int, input().split()))
+        ob = Solution()
+        ans = ob.subArraySum(A, N, S)
+
+        for i in ans:
+            print(i, end=" ")
+
+        print()
+
+        T -= 1
+if __name__ == "__main__":
+    main()
+# } Driver Code Ends
+
+
+
+
+
+
