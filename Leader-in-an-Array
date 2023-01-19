@@ -1,0 +1,57 @@
+In this program we have an array A with a length N.
+We have to find the LEADERS in the array 
+going from right side a LEADER is a element that is largest in the array
+so for ex: n = 6 A[] = {16,17,4,3,5,2} Output: 17 5 2
+Explanation: The first leader is 17 as it is greater than all the elements to its right. 
+Similarly, the next leader is 5. The right most element is always a leader so it is also included.
+Rightmost element is ALWAYS a leader
+
+class Solution:
+    #Back-end complete function Template for Python 3
+    
+    #Function to find the leaders in the array.
+    def leaders(self, A, N):
+        #Code here
+        leader=[A[-1]]         # Rightmost element of a array is always a leader hence saving last element. 
+        max=A[-1]              # variable will be used to check if element is a leader. instantiating with last element
+        
+        for i in range (N-2, -1,-1):        # loop runs from second last element and going to -1(NOT 0, because end part is also exclusive) and step is -1(to run in reverse)
+            if maxx<=A[i]:                  # checking next vairable is greater than leader 
+               leader.append(A[i])
+               maxx=A[i]
+               
+
+        return leader[::-1]               # return the list in order of element in array from left hence reversing return
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+import math
+
+
+    
+def main():
+    
+    T=int(input())
+    
+    while(T>0):
+        
+        
+        N=int(input())
+        
+        A=[int(x) for x in input().strip().split()]
+        obj = Solution()
+        
+        A=obj.leaders(A,N)
+        
+        for i in A:
+            print(i,end=" ")
+        print()
+        
+        T-=1
+
+if __name__=="__main__":
+    main()
+# } Driver Code Ends
