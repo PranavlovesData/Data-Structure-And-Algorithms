@@ -1,0 +1,98 @@
+Selection Sort: This sorting technique repeatedly find the minimum element and sort it in order.While Bubble Sort
+--------------- does not occupy and extra space. Selection sort is more efficient sorting algorithm than bubble sort.
+During this sorting two seperate sub-array are maintained minimum element of unsorted array is added to sorted one 
+and then it is returned 
+
+Time Complexity: Time complexity is O(n2) in worst/average and best cases.
+---------------
+
+Examples:   1: Selection sort an array in Increasing order using a function Selection sort and return array 
+----------
+
+class Solution:
+	def SelectionSort(self,arr,n):
+		for s in range(n):
+			min=s
+                
+                for i in range(s+1,n):
+			if arr[i]<arr[min]:
+                           min=i
+		arr[i],arr[min]=arr[min],arr[i]
+	return arr
+
+# Driver code
+	data = [ 7, 2, 1, 6 ]
+	size = len(data)
+	selectionSort(data, size)
+
+	print('Sorted Array in Ascending Order is :')
+	print(data)
+
+
+###########################################
+
+2: Selection sort an array using function select()which take array(arr) and first element of array(i) and return selected element for each iteration
+   and selectionSort() which takes array and its size(n) and sort the array and returns the sorted array.
+
+class Solution: 
+    def select(self, arr, i):
+        # code here
+        min=i
+        for j in range(i,len(arr)):
+            if arr[j]< arr[min]:
+                min=j
+        return min
+        
+                
+    def selectionSort(self, arr,n):
+        #code here
+        idx=0
+        for i in range(n):
+            idx=self.select(arr,i)
+            arr[i],arr[idx]=arr[idx],arr[i]
+        return arr
+            
+       
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__': 
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        Solution().selectionSort(arr, n)
+        for i in range(n):
+            print(arr[i],end=" ")
+        print()
+# } Driver Code Ends   
+
+
+###########################################
+For Decreasing Order:
+
+# Selection Sort algorithm in Python
+def selectionSort(array, size):
+	
+	for s in range(size):
+		max_idx = s
+		
+		for i in range(s + 1, size):
+			
+			# For sorting in descending order
+			# for minimum element in each loop
+			if array[i] > array[max_idx]:
+				max_idx = i
+
+		# Arranging min at the correct position
+		(array[s], array[max_idx]) = (array[max_idx], array[s])
+
+# Driver code
+data = [ 7, 2, 1, 6 ]
+size = len(data)
+selectionSort(data, size)
+
+print('Sorted Array in Ascending Order is :')
+print(data)
+ 
