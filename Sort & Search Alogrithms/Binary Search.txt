@@ -1,17 +1,31 @@
-for i in range(n):
-		    if arr[i]==k:
-		        return i
-		return -1
+Given a sorted array of size N and an integer K, find the position at which K is present in the array using binary search.
 
-
+Approach 1: Simply sort the array by sort() then return the Kth value in the array.
+-----------
 
 class Solution:    
     def binarysearch(self, arr, n, k):
-        arr.sort()
+    	for i in range(n):
+		if arr[i]==k:
+		        return i
+	return -1
+
+
+Approach 2:
+------------
+Binary Search method: Now the right method of doing this question is by binary search where we have to find a mid value of the array by using start=0/end=n-1
+-------------------- then we compare this mid value to K if its larger or smaller or equal based on these conditions we reduce the array hence reducticing down
+to the value of integer. In case its not present we return  -1.
+
+Condtion for Binary search: Array always has to be sorted.
+
+class Solution:    
+    def binarysearch(self, arr, n, k):
+        arr.sort()            		 # sorting array in case its unsorted
         start=0
         end=n-1
         while start<=end:
-            mid=(start+end)//2
+            mid=(start+end)//2  	 # determining the mid value
             if arr[mid]>k:
                 end=mid-1
             elif arr[mid]<k:
