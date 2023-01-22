@@ -1,0 +1,70 @@
+Longest Common Prefix in an Array : Given a array of N strings, find the longest common prefix among all strings present in the array.
+---------------------------------
+
+Examples: Input: 
+N = 4
+arr[] = {geeksforgeeks, geeks, geek,
+         geezer}
+
+Output: gee
+Explanation: "gee" is the longest common
+prefix in all the given strings.
+
+Input: 
+N = 2
+arr[] = {hello, world}
+
+Output: -1
+Explanation: There's no common prefix
+in the given strings.
+
+
+# Approach 1:
+
+First of all we need to find the smallest string in the array. we can store it in a variable and compare it with other element in the array.
+Then each time a substring element is found in the array we count it. and at the end compare to check if count==len(arr)
+At the end we return the variable with longest prefix.
+############################################################################
+
+ Code:
+
+#User function Template for python3
+
+class Solution:
+    def longestCommonPrefix(self, arr, n):
+       if n<2:      # ie only 1 element
+          return -1
+       arr.sort()
+       str=arr[0]   # variable containing smallest string
+       arr.remove(arr[0])   # now that we have taken the smallest string it can be removed
+       val=""
+       for i in range(len(str)):                     # this loop runs for each letter of string: 0:g,1:e,2:e,3:k
+            count=0  
+            for j in arr:                            # Now we compare if each letter of string is present in all element of array
+                if str[i]==j[i]:
+                    count+=1
+                else:
+                    break
+            if count==len(arr):                # checking if letter is in all element by comparing the size of count with array.
+                 val+=str[i]                   # store the letter thats present
+            else:
+                break
+       if len(val)==0:                         # if the val is 0 means there is no common prefix hence return -1
+            return -1
+       return val
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__=='__main__':
+    t=int(input())
+    for _ in range(t):
+        n = int(input())
+        arr = [x for x in input().strip().split(" ")]
+        
+        ob=Solution()
+        print(ob.longestCommonPrefix(arr, n))
+# } Driver Code Ends
+
+
