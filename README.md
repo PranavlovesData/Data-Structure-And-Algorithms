@@ -1,5 +1,7 @@
 # Data-Structure-And-Algorithms
-Data Structures and Algorithm problems and solution walkthroughs.
+Data Structures and Algorithm problems and their solution. This repository consists of all the questions I have attempted on
+GeekforGeeks or LeetCode or Hackerank.
+
 
 **<Span style="color:red;">My Notebooks: Search & Sort Algorithms </span>**    [**Checkout**](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/tree/main/Sort%20%26%20Search%20Alogrithms) 
 
@@ -13,7 +15,12 @@ Data Structures and Algorithm problems and solution walkthroughs.
 | **4.**    | **[Binary Search](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Sort%20%26%20Search%20Alogrithms/Binary%20Search.txt)** |
 | **5.**    | **[Bubble Sort](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Sort%20%26%20Search%20Alogrithms/Sorting%20Algorithms/Bubble%20Sort.txt)** |
 
-## ![](https://media.giphy.com/media/xTiTnM6WqhU5bcOxXy/giphy.gif)
+
+
+
+
+## ![](https://media.giphy.com/media/xT5LMwlfd7jHilyWsg/giphy-downsized.gif)
+![](https://media.giphy.com/media/xT0BKCQJDzoTaeQyA0/giphy-downsized.gif)
 
 
 ![](https://in.pinterest.com/pin/2040762321801971/visual-search/?imageSignature=5491043d4f4c66d1e1a85cb987fb886a)
