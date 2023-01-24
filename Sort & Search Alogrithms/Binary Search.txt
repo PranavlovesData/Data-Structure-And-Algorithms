@@ -5,6 +5,7 @@ Approach 1: Simply sort the array by sort() then return the Kth value in the arr
 
 class Solution:    
     def binarysearch(self, arr, n, k):
+    	arr.sort()
     	for i in range(n):
 		if arr[i]==k:
 		        return i
