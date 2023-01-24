@@ -1,0 +1,66 @@
+Insertion Sort: This sorting method is more effiecient than bubble or selection sort. In this method we maintain a sorted sub-array.
+FIrst element of given array is always assumed to be sorted. Values from unsorted array is checked and INSERTed at correct position.
+
+Time Complexity: O(n2) at worst and O(n) in best case.
+
+Solution 1: 
+
+def insertion_sort(list1): 
+    for i in range(1,len(list1)):
+       a=list1[i]
+       j=i-1
+       while j>=0 and a < list1[j]:
+          list1[j+1] list1[j]
+          j-=1
+       list1[j+1]=a
+    return list1
+            
+# Driver code
+list1 = [ 7, 2, 1, 6 ] 
+print("The unsorted list is:", list1) 
+print("The sorted new list is:", insertion_sort(list1))
+
+
+#############################################################################################
+Solution 2:
+
+The task is to complete the insert() function which is used to implement Insertion Sort.
+Example:
+Input:
+N = 5
+arr[] = { 4, 1, 3, 9, 7}
+Output:
+1 3 4 7 9
+
+#Sort the array using insertion sort
+
+class Solution:
+    def insert(self, alist, index, j):
+       temp=alist[index]
+       j=index-1
+       while j>=0 and temp<alist[j]:
+          alist[j+1]=alist[j]
+          j-=1
+       alist[j+1]=temp
+       
+    def insertionSort(self, alist, n):
+          for i in range(N):
+              self.insert(alist,i,n)
+            
+
+#{ 
+ # Driver Code Starts
+if __name__=="__main__":
+    t=int(input())
+    for i in range(t):
+        n=int(input())
+        arr=list(map(int,input().split()))
+    
+        Solution().insertionSort(arr,n)
+    
+        for i in range(n):
+            print(arr[i],end=" ")
+    
+        print()
+# } Driver Code Ends
+
