@@ -1,0 +1,66 @@
+Given an array arr[] of positive integers of size N. Reverse every sub-array group of size K.
+
+Note: If at any instance, there are no more subarrays of size greater than or equal to K, 
+----- then reverse the last subarray (irrespective of its size). You shouldn't return any array, modify the given array in-place.
+
+Approach: We run a loop from i=0 to i=N in that we use a # condition1: to check if i+K< N if yes then reverse the sub array 
+--------  in # conditon2 : we reverse rest of the element in loop.
+
+Solution:
+----------
+
+#User function template for Python
+
+class Solution:	
+    #Function to reverse every sub-array group of size k.
+	def reverseInGroups(self, arr, N, K):
+      i=0
+	    while(i<N):
+	                                                 #If i+K < N it means
+                                                   #k elements exist from current index so we reverse k elements 
+                                                   #starting from current index.
+          if (i+K<N):
+	                                               
+	            arr[i:i+K]=reversed(arr[i:i+K])     #reversed function used to reverse any part of the array.
+	            i+=K                                #updating index from i to i+k.
+	                                                #Else k elements from current index doesn't exist. 
+                                                  #In that case we just reverse the remaining elements.    
+	        else:
+	           arr[i:]=reversed(arr[i:])            #reversed function used to reverse any part of the array.
+	           i+=K                                 #updating index from i to i+k
+	                  
+	            
+	                                                
+	                 
+	            
+	        
+
+
+#{ 
+ # Driver Code Starts
+#Initial template for Python
+
+import math
+def main():
+    T=int(input())
+    while(T>0):
+        nk=[int(x) for x in input().strip().split()]
+        N=nk[0]
+        K=nk[1]
+        arr=[int(x) for x in input().strip().split()]
+        
+        ob = Solution()
+        ob.reverseInGroups(arr,N,K)
+        for i in arr:
+            print(i,end=" ")
+        print()
+        T-=1
+
+if __name__=="__main__":
+    main()
+
+
+
+
+# } Driver Code Ends
+
