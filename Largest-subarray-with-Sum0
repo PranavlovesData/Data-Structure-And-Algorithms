@@ -1,0 +1,41 @@
+Given an array having both positive and negative integers. The task is to compute the length of the largest subarray with sum 0.
+
+Example 1:
+
+Input:
+N = 8
+A[] = {15,-2,2,-8,1,7,10,23}
+Output: 5
+Explanation: The largest subarray with
+sum 0 will be -2 2 -8 1 7.
+
+
+
+class Solution:
+   def maxLen(self,arr,n):
+    ans=0                 # to store final subarray 
+    s=0                   # to store sum of element of sub array  
+    dict={}
+    for i in range(n):
+        s+=s[i]           # we add each element in array
+        if s==0:          # checking if sum of subarray is 0.
+          ans=i+1         # adding 1 because of 0 based indexing
+        else:             # when value of sum s is not zero we check and add element in a dict. 
+          if s not in dict:  
+              dict[s]=i   # adding value of sum in dict if not present already hence 
+           else:
+              ans=max(ans,i-dict[s])
+     return ans
+     
+     
+#{
+# Driver Code Starts
+if __name__ == '__main__':
+    t = int(input())
+    for i in range(t):
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        ob = Solution()
+        print(ob.maxLen(n, arr))
+# Contributed by: Harshit Sidhwa
+# } Driver Code Ends
