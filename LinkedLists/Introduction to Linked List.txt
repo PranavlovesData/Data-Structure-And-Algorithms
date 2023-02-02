@@ -1,0 +1,40 @@
+Linked List:Its a linear data structure in which element are not stored in contigous memory allocation.
+They are stored in a format in which each element is linked with address of next element.
+Hence its called a linked list.'Pointers' are used to store address of next element.
+
+Advantages of Linked Lists over arrays:
+Dynamic Array.
+Ease of Insertion/Deletion.
+
+Drawbacks of Linked Lists: 
+Random access is not allowed. We have to access elements sequentially starting from the first node(head node). So we cannot do a binary search with linked lists efficiently with its default implementation. 
+Extra memory space for a pointer is required with each element of the list. 
+Not cache-friendly. Since array elements are contiguous locations, there is the locality of reference which is not there in the case of linked lists.
+It takes a lot of time in traversing and changing the pointers.
+Reverse traversing is not possible in singly linked lists.
+It will be confusing when we work with pointers.
+Direct access to an element is not possible in a linked list as in an array by index.
+Searching for an element is costly and requires O(n) time complexity.
+Sorting of linked lists is very complex and costly.
+
+Types of Linked List:
+
+1. Simple Linked List: Its a linked list in which we can traverse in one direction each element has pointer to next
+linked to it. The last element points to NULL
+
+2. Double Linked List: In this linked list we can traverse backward and forward as it also 
+points to previous element not last next one.
+
+3. Circular linked list: This linked list's last element points to head of first element.
+Hence called circular linked list.
+
+4. Doubly Circular Linked List – A Doubly Circular linked list or a circular 
+two-way linked list is a more complex type of linked list that contains a pointer to the next 
+as well as the previous node in the sequence. 
+The difference between the doubly linked and circular doubly list is the same as that 
+between a singly linked list and a circular linked list. 
+The circular doubly linked list does not contain null in the previous field of the 
+first node.
+
+5. Header Linked List – A header linked list is a special type of linked list that contains 
+a header node at the beginning of the list. 
