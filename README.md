@@ -14,6 +14,9 @@ GeekforGeeks or LeetCode or Hackerank.
 | **3.**    | **[Wave Array](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Wave-Array)** |
 | **4.**    | **[Binary Search](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Sort%20%26%20Search%20Alogrithms/Binary%20Search.txt)** |
 | **5.**    | **[Bubble Sort](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Sort%20%26%20Search%20Alogrithms/Sorting%20Algorithms/Bubble%20Sort.txt)** |
+| **6.**    | **[Merge Sort](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Sort%20%26%20Search%20Alogrithms/Sorting%20Algorithms/Merge-sort)** |
+| **7.**    | **[Selection Sort](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/Sort%20%26%20Search%20Alogrithms/Sorting%20Algorithms/Selection%20Sort.txt)** |
+| **8.**    | **[Floyd's Fast and Slow Pointer method](https://github.com/PranavlovesData/Data-Structure-And-Algorithms/blob/main/LinkedLists/Floyd's-FastAndSlowPointer-method)** |
 
 
 
